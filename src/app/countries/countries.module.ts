@@ -5,6 +5,9 @@ import { ByRegionPageComponent } from './components/by-region-page/by-region-pag
 import { ByCountryPageComponent } from './components/by-country-page/by-country-page.component';
 import { CountryPageComponent } from './components/country-page/country-page.component';
 import { SharedModule } from '../shared/shared.module';
+import { CountriesRoutingModule } from './countries.routing.module';
+import { RouterModule } from '@angular/router';
+import { CountryTableComponent } from './components/country-table/country-table.component';
 
 
 
@@ -14,11 +17,13 @@ import { SharedModule } from '../shared/shared.module';
     ByCapitalPageComponent,
     ByRegionPageComponent,
     ByCountryPageComponent,
-    CountryPageComponent
+    CountryPageComponent,
+    CountryTableComponent
 
   ],
   imports: [
     CommonModule,
+    CountriesRoutingModule,
     SharedModule
   ]
 })

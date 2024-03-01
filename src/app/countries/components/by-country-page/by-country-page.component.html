@@ -1,0 +1,23 @@
+<div class="row">
+
+    <div class="col">
+
+        <shared-searchBox placeholder="Buscar por Pais" 
+        (transmiter)="importCountry($event)"></shared-searchBox>
+
+    </div>
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="col">
+
+    <countries-country-table class="container" [countries]="countries"></countries-country-table>
+
+
+    </div>
+
+</div>

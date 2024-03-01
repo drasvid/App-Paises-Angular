@@ -1,1 +1,5 @@
-<h2>el searchBox funciona</h2>
+<input type="text" 
+        [placeholder]='placeholder'
+        class="form-control"
+        (keyup.enter)="listening(txtInput.value)"
+        #txtInput>

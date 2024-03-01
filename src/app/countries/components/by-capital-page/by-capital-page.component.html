@@ -1,1 +1,34 @@
-<shared-searchBox></shared-searchBox>
+
+<div class="row">
+
+    <div class="col">
+
+        <shared-searchBox
+
+            placeholder="Busqueda por Capital"
+            (transmiter)="imprimiValor($event)">
+        
+        </shared-searchBox>
+
+
+
+    </div>
+
+
+
+</div>
+
+
+
+<div class="row">
+
+    <div class="col">
+
+        <countries-country-table class="container" [countries]="countries"></countries-country-table>
+
+
+    </div>
+
+
+
+</div>

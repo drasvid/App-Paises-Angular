@@ -9,6 +9,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SharedSidebarComponent } from './components/shared-sidebar/shared-sidebar.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { AppModule } from '../app.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -23,9 +25,9 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 
   exports:[
 
-    // HomePageComponent,
-    // AboutPageComponent,
-    // ContactPageComponent,
+    HomePageComponent,
+    AboutPageComponent,
+    ContactPageComponent,
     SharedSidebarComponent,
     SearchBoxComponent
     
@@ -33,7 +35,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

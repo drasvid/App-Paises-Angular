@@ -36,8 +36,7 @@ const routes:Routes=[
     {
 
         path:'countries',
-        loadChildren:()=>import('./countries/countries.routing.module')
-                        .then(module=>module.CountriesRoutingModule)
+        loadChildren:()=>import('./countries/countries.module').then(m=>m.CountriesModule)
 
     },
     // todos las rutas que no esten especificaddas, las redijira a home
