@@ -22,6 +22,12 @@ export class ByCountryPageComponent {
 
 
 
+  }
+
+  public imprimir(){
+
+    console.log( this.countries );
+
 
   }
 

@@ -11,6 +11,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { AppModule } from '../app.module';
 import { RouterModule } from '@angular/router';
+import { ShowMapComponent } from './components/show-map/show-map.component';
 
 
 
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     AboutPageComponent,
     SharedSidebarComponent, 
     ContactPageComponent, 
-    SearchBoxComponent
+    SearchBoxComponent, 
+    ShowMapComponent
   ],
 
   exports:[
@@ -29,7 +31,8 @@ import { RouterModule } from '@angular/router';
     AboutPageComponent,
     ContactPageComponent,
     SharedSidebarComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    ShowMapComponent
     
 
   ],

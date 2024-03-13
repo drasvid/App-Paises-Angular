@@ -5,33 +5,36 @@ import { ByCountryPageComponent } from './components/by-country-page/by-country-
 import { ByRegionPageComponent } from './components/by-region-page/by-region-page.component';
 import { CountryPageComponent } from './components/country-page/country-page.component';
 
-const routes:Routes=[
+const routes: Routes = [
 
     {
 
-        path:'by-capital',
-        component:ByCapitalPageComponent
+        path: 'by-capital',
+        component: ByCapitalPageComponent
 
     },
 
     {
-        path:'by-country',
-        component:ByCountryPageComponent
+        path: 'by-country',
+        component: ByCountryPageComponent
 
-    },
-
-    
-    {
-        path:'by-region',
-        component:ByRegionPageComponent
-    
     },
 
 
     {
-        path:'by/:id',
-        component:CountryPageComponent
-    }
+        path: 'by-region',
+        component: ByRegionPageComponent
+
+    },
+
+
+    {
+        path: 'by/:id',
+        component: CountryPageComponent
+    },
+
+
+
 ]
 
 
