@@ -17,12 +17,12 @@ export class CountryPageComponent implements OnInit {
   ) { }
 
   public country?:Country;
+  public arrayCoordinates:number[]|undefined;
 
-  public arrayCoordinates:number[]|undefined=this.country?.latlng;
 
   public imprimir(){
 
-    console.log( this.arrayCoordinates);
+    console.log( this.country);
 
   }
   
@@ -46,8 +46,9 @@ export class CountryPageComponent implements OnInit {
 
               }else{
 
-               return this.country=country;
+                this.country=country;
 
+                return this.arrayCoordinates=this.country?.latlng;
 
               }
 

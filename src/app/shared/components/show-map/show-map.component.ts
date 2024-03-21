@@ -21,7 +21,7 @@ export class ShowMapComponent {
 
    if (this.coordinates) {
      
-     return console.log( this.coordinates.length );
+     return console.log( this.coordinates );
 
    }else{
 
@@ -36,12 +36,17 @@ export class ShowMapComponent {
 
   ngAfterViewInit():void{
 
-    const map= new Map('map').setView([-34.88,-64.95], 5);
+    if (this.coordinates) {
+      
+      const map= new Map('map').setView([this.coordinates[0],this.coordinates[1]], 5);
 
-    tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+      tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+  
+
+    }
 
 
   }
