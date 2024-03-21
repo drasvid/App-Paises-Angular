@@ -10,30 +10,31 @@ import { config } from 'rxjs';
 export class ShowMapComponent {
 
 
-  @Input()
-   coordinates:number|undefined;
+  constructor(){}
 
-
-  imprimir(){
-
-    if (!this.coordinates) {
       
-      return console.log( this.coordinates );
+  @Input()
+  coordinates:number[]|undefined;
 
-    }else{
+
+ imprimir(){
+
+   if (this.coordinates) {
+     
+     return console.log( this.coordinates.length );
+
+   }else{
 
 
-      return console.log( 'No hay coordenadas' );
+     return console.log( 'No hay coordenadas' );
 
-    }
+   }
 
-  }
-
+ }
 
 
 
   ngAfterViewInit():void{
-
 
     const map= new Map('map').setView([-34.88,-64.95], 5);
 

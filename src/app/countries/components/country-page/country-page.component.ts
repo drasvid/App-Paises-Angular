@@ -16,23 +16,21 @@ export class CountryPageComponent implements OnInit {
     private router: Router
   ) { }
 
-  public country?: Country;
+  public country?:Country;
 
-
-  public coordinates=this.country?.latlng[0];
+  public arrayCoordinates:number[]|undefined=this.country?.latlng;
 
   public imprimir(){
 
-
-    console.log( this.country?.latlng );
+    console.log( this.arrayCoordinates);
 
   }
   
 
 
-
-
   ngOnInit(): void {
+
+
     this.activatedRoute.params
       .subscribe(
 
@@ -46,9 +44,13 @@ export class CountryPageComponent implements OnInit {
 
                 return this.router.navigateByUrl('');
 
+              }else{
+
+               return this.country=country;
+
+
               }
 
-              return this.country = country
 
             })
         }
