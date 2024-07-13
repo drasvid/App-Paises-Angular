@@ -12,6 +12,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
 import { AppModule } from '../app.module';
 import { RouterModule } from '@angular/router';
 import { ShowMapComponent } from './components/show-map/show-map.component';
+import { LazyImageComponent } from './components/lazy-image/lazy-image.component';
 
 
 
@@ -22,7 +23,8 @@ import { ShowMapComponent } from './components/show-map/show-map.component';
     SharedSidebarComponent, 
     ContactPageComponent, 
     SearchBoxComponent, 
-    ShowMapComponent
+    ShowMapComponent,
+    LazyImageComponent
   ],
 
   exports:[
@@ -32,7 +34,8 @@ import { ShowMapComponent } from './components/show-map/show-map.component';
     ContactPageComponent,
     SharedSidebarComponent,
     SearchBoxComponent,
-    ShowMapComponent
+    ShowMapComponent,
+    LazyImageComponent
     
 
   ],

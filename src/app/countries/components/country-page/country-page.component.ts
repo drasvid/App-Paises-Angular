@@ -25,7 +25,7 @@ export class CountryPageComponent implements OnInit {
     console.log( this.country);
 
   }
-  
+
 
 
   ngOnInit(): void {

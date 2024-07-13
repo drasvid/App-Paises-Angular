@@ -1,5 +1,5 @@
 import { Component, importProvidersFrom, Input, OnInit } from '@angular/core';
-import {Map, tileLayer} from 'leaflet';
+import {Map, tileLayer,marker} from 'leaflet';
 import { config } from 'rxjs';
 
 @Component({
@@ -37,14 +37,22 @@ export class ShowMapComponent {
   ngAfterViewInit():void{
 
     if (this.coordinates) {
+
+      const L=new Map('map');
       
-      const map= new Map('map').setView([this.coordinates[0],this.coordinates[1]], 5);
+      const map= L.setView([this.coordinates[0],this.coordinates[1]], 5);
+
 
       tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
       }).addTo(map);
-  
+
+      marker([this.coordinates[0],this.coordinates[1]]).addTo(map);
+
+
+
+      
 
     }
 

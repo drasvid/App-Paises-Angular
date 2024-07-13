@@ -37,16 +37,18 @@
 
                 <h3>Bandera</h3>
 
-                <img class="img-thumbnail" src="{{country.flags.svg}}" alt="">
+                <!-- <img class="img-thumbnail" src="{{country.flags.svg}}" alt=""> -->
+                <shared-lazy-image [url]="country.flags.svg"></shared-lazy-image>
+
 
             </div>
 
             <div class="mt-3">
 
                 <h3>Escudo</h3>
+                <!-- <img class="img-thumbnail" src="{{country.coatOfArms.png}}" alt=""> -->
 
-
-                <img class="img-thumbnail" src="{{country.coatOfArms.png}}" alt="">
+                <shared-lazy-image [url]="country.coatOfArms.png"></shared-lazy-image>
 
 
 
@@ -61,7 +63,7 @@
 
             <ul class="list-group">
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Poblacion:</strong>
 
@@ -69,7 +71,7 @@
 
                 </li>
                 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Codigo:</strong>
 
@@ -77,7 +79,7 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Capital:</strong>
 
@@ -85,7 +87,7 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Region:</strong>
 
@@ -93,7 +95,7 @@
 
                 </li>
                 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Superficie (Km<sup>2</sup>):</strong>
 
@@ -101,7 +103,7 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Fronteras:</strong>
 
@@ -109,7 +111,7 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Idioma:</strong>
 
@@ -117,14 +119,14 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Poblacion:</strong>
 
                     {{country.population|number}}
 
                 </li>
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Latitud y Longitud:</strong>
 
@@ -132,33 +134,33 @@
 
                 </li>
 
-                <li class="lsit-group-item">
+                <li class="list-group-item">
 
                     <strong>Traducciones:</strong>
 
-        
+                    <div>
+                
+    
+                        <span class=" badge bg-primary m-1">{{country.translations['ara'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['deu'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['fra'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['ita'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['jpn'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['spa'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['rus'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['por'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['pol'].common}}</span>
+                        <span class=" badge bg-primary m-1">{{country.translations['per'].common}}</span>
+            
+                        
+                     </div>
 
                 </li>
 
 
             </ul>
 
-            <div>
-                
-    
-                <span class=" badge bg-primary m-1">{{country.translations['ara'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['deu'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['fra'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['ita'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['jpn'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['spa'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['rus'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['por'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['pol'].common}}</span>
-                <span class=" badge bg-primary m-1">{{country.translations['per'].common}}</span>
-    
-                
-             </div>
+
 
 
         </div>
@@ -170,9 +172,7 @@
     <div class="row">
 
         <shared-show-map [coordinates]="arrayCoordinates"></shared-show-map>
-        <button type="button" (click)="imprimir()">Mostrar coordenadas</button>
-
-
+        <!-- <button type="button" (click)="imprimir()">Mostrar coordenadas</button> -->
 
     </div>
 
